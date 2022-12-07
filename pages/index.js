@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import selfie from '../public/pixel-selfie.png'
 import tree from '../public/lone-tree.jpg'
+import TopNav from '../components/TopNav';
 
 export default function Home() {
   return (
@@ -16,18 +17,7 @@ export default function Home() {
       <main className='px-5'>
         <section>
           {/** Main Navigation */}
-          <nav className='py-5 mb-12 flex justify-between'>
-            <h1 className='text-lg font-bold'>Portfolio</h1>
-            <ul className='flex items-center'>
-              <li>
-                <a
-                  className='bg-gradient-to-r from-amber-600 to-amber-500 text-white px-4 py-2 rounded-md ml-8'
-                  href="#">
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <TopNav />
 
           {/** Content Body */}
           <div className='max-w-2xl m-auto'>
