@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useState } from 'react'
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import selfie from '../public/pixel-selfie.png'
 import tree from '../public/lone-tree.jpg'
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <div>
       <Head>
@@ -14,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='px-5'>
+      <main className='px-5 dark:bg-slate-800 dark:text-white'>
         <section>
           {/** Main Navigation */}
           <nav className='py-5 mb-12 flex justify-between'>
@@ -35,11 +37,11 @@ export default function Home() {
 
           {/** Content Body */}
           <div className='max-w-2xl m-auto'>
-          <Image className='m-auto' src={tree} />
+            <Image className='m-auto' src={tree} />
             {/** Bio */}
             <div className='text-center max-w-xl m-auto'>
-              
-              <h2 className='text-3xl font-medium leading-10'>
+
+              <h2 className='text-3xl font-medium leading-10 py-5'>
                 Ian Skelskey
               </h2>
               <p className='leading-10'>
@@ -48,7 +50,7 @@ export default function Home() {
             </div>
 
             {/** Social Links */}
-            <div className='text-5xl flex justify-center gap-16 text-slate-600'>
+            <div className='text-5xl flex justify-center gap-16 text-slate-600 py-5'>
               <AiFillInstagram />
               <AiFillLinkedin />
               <AiFillYoutube />
