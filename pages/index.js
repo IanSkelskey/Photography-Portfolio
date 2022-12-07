@@ -1,13 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react'
-import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import selfie from '../public/pixel-selfie.png'
 import tree from '../public/lone-tree.jpg'
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
   return (
     <div className='dark:bg-slate-800 dark:text-white min-h-screen'>
       <Head>
@@ -22,9 +19,6 @@ export default function Home() {
           <nav className='py-5 mb-12 flex justify-between'>
             <h1 className='text-lg font-bold'>Portfolio</h1>
             <ul className='flex items-center'>
-              <li>
-                <BsFillMoonStarsFill className='cursor-pointer text-xl' />
-              </li>
               <li>
                 <a
                   className='bg-gradient-to-r from-amber-600 to-amber-500 text-white px-4 py-2 rounded-md ml-8'
