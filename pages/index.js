@@ -18,14 +18,13 @@ export default function Home() {
 
       <main className='px-5'>
         <section>
-          {/** Main Navigation */}
           <TopNav
             title={'Your Name'}
             subcomponents={
               [
-                <TextButton text='Resume' />,
-                <TextButton text='Contact' />,
-                <AiFillHeart className='text-2xl text-red-500' />
+                <TextButton key={1} text='Resume' />,
+                <TextButton key={2} text='Contact' />,
+                <AiFillHeart key={3} className='text-2xl text-red-500' />
               ]
             } />
 
