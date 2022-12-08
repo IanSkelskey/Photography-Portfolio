@@ -3,7 +3,8 @@ import { AiOutlineMenu } from 'react-icons/ai'
 
 /**
  * 
- * @param {*} subcomponents Array of components to be displayed on the right side of the top navigation.
+ * @param {*} subcomponents Array of components to be displayed on the right side of the nav bar.
+ * @param {string} title Title to be displayed on the left of the nav bar.
  * @returns 
  */
 export default function TopNav({ title, subcomponents }) {

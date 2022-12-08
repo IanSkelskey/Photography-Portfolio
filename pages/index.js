@@ -7,7 +7,11 @@ import rainbow from '../public/photos/rainbow.png'
 import TopNav from '../components/TopNav';
 import TextButton from "../components/TextButton";
 
-export default function Home() {
+/**
+ * 
+ * @returns A portfolio web application.
+ */
+export default function Portfolio() {
   return (
     <div className='dark:bg-slate-800 dark:text-white min-h-screen'>
       <Head>
