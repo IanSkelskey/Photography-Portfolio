@@ -7,6 +7,7 @@ import church from '../public/photos/iceland/church.png'
 //  Custom Tailwind Components
 import TopNav from '../components/TopNav';
 import TextButton from "../components/TextButton";
+import ContentCard from '../components/ContentCard';
 
 /**
  * 
@@ -37,23 +38,15 @@ export default function Portfolio() {
           <div className='m-auto'>
 
 
-            {/** Title Card & Image Section */}
-            <div className='shadow-2xl p-10 lg:flex lg:items-center space-x-20 m-auto'>
-              
-              {/** Title Card */}
-              <div className='px-5'>
-                <h2 className='lg:text-7xl text-3xl font-medium leading-normal py-5'>
-                  TITLE ONLY CARD
-                </h2>
-              </div>
-
-              <Image className='m-auto lg:w-1/2' src={rainbow} />
-            </div>
-
+            <ContentCard
+              title='TITLE ONLY CARD'
+              image={<Image className='m-auto lg:w-1/2' src={rainbow} />}
+              dark={true}
+            />
 
             {/** Titled Text Card & Image Section */}
             <div className='shadow-2xl p-10 lg:flex lg:items-center space-x-20 m-auto bg-zinc-800 text-white'>
-              
+
               {/** Title Card */}
               <Image className='m-auto lg:w-1/2' src={church} />
               <div className='p-5'>
@@ -68,7 +61,7 @@ export default function Portfolio() {
                   Nunc tempor blandit risus. Nunc lacus mi, tempus sit amet nisi non, rutrum imperdiet nunc.
                 </p>
               </div>
-              
+
 
             </div>
 
