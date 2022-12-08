@@ -27,8 +27,8 @@ export default function Portfolio() {
             title={'Your Name'}
             subcomponents={
               [
-                <a className='font-medium' href='#'>Resume</a>,
-                <a className='font-medium' href='#'>Contact</a>,
+                <a key={1} className='font-medium' href='#'>Resume</a>,
+                <a key={2} className='font-medium' href='#'>Contact</a>,
                 <AiOutlineHeart key={3} className='text-2x' />
               ]
             } />
@@ -57,7 +57,7 @@ export default function Portfolio() {
               {/** Title Card */}
               <Image className='m-auto lg:w-1/2' src={church} />
               <div className='p-5'>
-                <h2 className='lg:text-5xl text-3xl font-medium leading-relaxed py-5'>
+                <h2 className='lg:text-7xl text-3xl font-medium leading-relaxed py-5'>
                   Title Text Card
                 </h2>
                 <p className='leading-10'>
