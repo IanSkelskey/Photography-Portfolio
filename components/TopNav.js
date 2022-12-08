@@ -1,16 +1,25 @@
-import TextButton from "./TextButton";
+import { AiOutlineMenu } from 'react-icons/ai'
 
-export default function TopNav(props) {
+export default function TopNav({ subcomponents }) {
+
+    function generateSubcomponents() {
+        let components = []
+        for (var i = 0; i < subcomponents.length; i++) {
+            components[i] = <li>{subcomponents[i]}</li>
+        }
+        return components;
+    }
 
     return (
         <div>
-            {/** Main Navigation */}
             < nav className='py-5 mb-12 flex justify-between' >
-                <h1 className='text-lg font-bold'>Portfolio</h1>
-                <ul className='flex items-center'>
-                    <li>
-                        <TextButton color='amber'/>
-                    </li>
+                <ui className='flex items-center space-x-5'>
+                    <AiOutlineMenu className='text-2xl cursor-pointer' />
+                    <h1 className='text-lg font-bold'>Portfolio</h1>
+                </ui>
+
+                <ul className='flex items-center space-x-5'>
+                    {generateSubcomponents()}
                 </ul>
             </nav >
         </div>

@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
-import selfie from '../public/pixel-selfie.png'
-import tree from '../public/lone-tree.jpg'
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineMenu } from 'react-icons/ai';
+import rainbow from '../public/photos/rainbow.png'
+
+//  Custom Tailwind Components
 import TopNav from '../components/TopNav';
+import TextButton from "../components/TextButton";
 
 export default function Home() {
   return (
@@ -17,11 +19,16 @@ export default function Home() {
       <main className='px-5'>
         <section>
           {/** Main Navigation */}
-          <TopNav />
+          <TopNav subcomponents={
+            [
+              <TextButton text='Resume' />,
+              <TextButton text='Contact' />
+            ]
+          } />
 
           {/** Content Body */}
           <div className='max-w-2xl m-auto'>
-            <Image className='m-auto' src={tree} />
+            <Image className='m-auto' src={rainbow} />
             {/** Bio */}
             <div className='text-center max-w-xl m-auto'>
 
