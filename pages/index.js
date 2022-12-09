@@ -42,7 +42,7 @@ export default function Portfolio() {
             <ContentCard
               title='“Photography is the art of making memories tangible.”'
               text='- Destin Sparks'
-              image={<Image className='px-5 lg:w-1/2' src={rainbow} />}
+              image={<Image className='lg:px-5 lg:w-1/2' src={rainbow} />}
               dark={false}
             />
 
