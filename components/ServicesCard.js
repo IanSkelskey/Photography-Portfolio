@@ -8,7 +8,7 @@ export default function ServicesCard({ dark }) {
             <h2 className='lg:text-7xl text-4xl font-medium leading-normal py-5 text-center mb-12'>Services</h2>
             {/** Flex Container */}
             <div className="flex max-w-screen-2xl mx-auto justify-center gap-16 items-center flex-col lg:flex-row">
-                <div className='flex-col text-center text-slate-600 max-w-md'>
+                <div className='flex-col text-center text-neutral-600 max-w-md'>
                     <BsPersonCircle className='mx-auto text-7xl' />
                     <p className='leading-10 mb-10 text-xl font-medium'>
                         Portraits
@@ -20,7 +20,7 @@ export default function ServicesCard({ dark }) {
                     </p>
                 </div>
 
-                <div className='flex-col text-center text-slate-600 max-w-md'>
+                <div className='flex-col text-center text-neutral-600 max-w-md'>
                     <GiPartyPopper className='mx-auto text-7xl' />
                     <p className='leading-10 mb-10 text-xl font-medium'>
                         Events
