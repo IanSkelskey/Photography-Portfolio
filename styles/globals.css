@@ -10,6 +10,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h1 {
+  @apply text-5xl text-center pt-10 pb-5 font-bold leading-loose
+}
+
+h2 {
+  @apply lg:text-7xl text-4xl font-medium py-5
+}
+
+
 a {
   color: inherit;
   text-decoration: none;

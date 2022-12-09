@@ -20,7 +20,7 @@ export default function TopNav({ title, subcomponents }) {
             <nav className='py-5 flex justify-between' >
                 <ui className='flex items-center space-x-5'>
                     <AiOutlineMenu className='text-2xl cursor-pointer' />
-                    <h1 className='text-lg font-bold'>{title}</h1>
+                    <p className='text-lg font-bold'>{title}</p>
                 </ui>
 
                 <ul className='flex items-center space-x-5'>
