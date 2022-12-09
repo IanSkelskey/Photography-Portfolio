@@ -37,15 +37,14 @@ export default function Portfolio() {
           {/** Main Content */}
           <div>
 
-            <h1 className='text-5xl text-center pt-10 pb-5 font-bold'>Your Name Photography</h1>
+            <h1>Your Name Photography</h1>
 
             <ContentCard
               title='“Photography is the art of making memories tangible.”'
               text='- Destin Sparks'
-              image={<Image className='lg:px-5 lg:w-1/2' src={rainbow} />}
+              image={<Image src={rainbow} />}
               dark={false}
             />
-
             <ContentCard
               title='Title Text Card'
               text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -53,7 +52,7 @@ export default function Portfolio() {
               Sed ut diam non est egestas hendrerit sed ullamcorper nisl.
               Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
               Nunc tempor blandit risus. Nunc lacus mi, tempus sit amet nisi non, rutrum imperdiet nunc.'
-              image={<Image className='m-auto lg:w-1/2' src={church} />}
+              image={<Image src={church} />}
               dark={true}
             />
 
