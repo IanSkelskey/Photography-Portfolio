@@ -30,15 +30,18 @@ export default function Portfolio() {
               [
                 <a key={1} className='font-medium' href='#'>Resume</a>,
                 <a key={2} className='font-medium' href='#'>Contact</a>,
-                <AiOutlineHeart key={3} className='text-2x' />
+                <AiOutlineHeart key={3} className='text-2xl' />
               ]
             } />
 
           {/** Main Content */}
           <div>
 
+            <h1 className='text-5xl text-center pt-10 pb-5 font-bold'>Your Name Photography</h1>
+
             <ContentCard
-              title='TITLE ONLY CARD'
+              title='“Photography is the art of making memories tangible.”'
+              text='- Destin Sparks'
               image={<Image className='px-5 lg:w-1/2' src={rainbow} />}
               dark={false}
             />
@@ -57,7 +60,7 @@ export default function Portfolio() {
             <ServicesCard />
 
             {/** Social Links */}
-            <div className='text-5xl flex justify-center gap-16 text-slate-600 py-5'>
+            <div className='text-5xl flex justify-center gap-16 text-neutral-600 py-5'>
               <AiFillInstagram />
               <AiFillLinkedin />
               <AiFillYoutube />

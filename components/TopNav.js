@@ -16,7 +16,7 @@ export default function TopNav({ title, subcomponents }) {
     }
 
     return (
-        <div className='px-5 bg-neutral-200'>
+        <div className='px-5 bg-neutral-100'>
             <nav className='py-5 flex justify-between' >
                 <ui className='flex items-center space-x-5'>
                     <AiOutlineMenu className='text-2xl cursor-pointer' />
