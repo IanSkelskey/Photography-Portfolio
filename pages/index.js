@@ -6,8 +6,8 @@ import church from '../public/photos/iceland/church.png'
 
 //  Custom Tailwind Components
 import TopNav from '../components/TopNav';
-import TextButton from "../components/TextButton";
 import ContentCard from '../components/ContentCard';
+import ServicesCard from '../components/ServicesCard';
 
 /**
  * 
@@ -35,12 +35,11 @@ export default function Portfolio() {
             } />
 
           {/** Main Content */}
-          <div className='m-auto'>
-
+          <div>
 
             <ContentCard
               title='TITLE ONLY CARD'
-              image={<Image className='m-auto lg:w-1/2' src={rainbow} />}
+              image={<Image className='px-5 lg:w-1/2' src={rainbow} />}
               dark={false}
             />
 
@@ -54,6 +53,8 @@ export default function Portfolio() {
               image={<Image className='m-auto lg:w-1/2' src={church} />}
               dark={true}
             />
+
+            <ServicesCard />
 
             {/** Social Links */}
             <div className='text-5xl flex justify-center gap-16 text-slate-600 py-5'>
