@@ -41,29 +41,19 @@ export default function Portfolio() {
             <ContentCard
               title='TITLE ONLY CARD'
               image={<Image className='m-auto lg:w-1/2' src={rainbow} />}
-              dark={true}
+              dark={false}
             />
 
-            {/** Titled Text Card & Image Section */}
-            <div className='shadow-2xl p-10 lg:flex lg:items-center space-x-20 m-auto bg-zinc-800 text-white'>
-
-              {/** Title Card */}
-              <Image className='m-auto lg:w-1/2' src={church} />
-              <div className='p-5'>
-                <h2 className='lg:text-7xl text-3xl font-medium leading-relaxed py-5'>
-                  Title Text Card
-                </h2>
-                <p className='leading-10'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Morbi vel nisl at velit ultricies ornare ac ac libero.
-                  Sed ut diam non est egestas hendrerit sed ullamcorper nisl.
-                  Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                  Nunc tempor blandit risus. Nunc lacus mi, tempus sit amet nisi non, rutrum imperdiet nunc.
-                </p>
-              </div>
-
-
-            </div>
+            <ContentCard
+              title='Title Text Card'
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Morbi vel nisl at velit ultricies ornare ac ac libero.
+              Sed ut diam non est egestas hendrerit sed ullamcorper nisl.
+              Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Nunc tempor blandit risus. Nunc lacus mi, tempus sit amet nisi non, rutrum imperdiet nunc.'
+              image={<Image className='m-auto lg:w-1/2' src={church} />}
+              dark={true}
+            />
 
             {/** Social Links */}
             <div className='text-5xl flex justify-center gap-16 text-slate-600 py-5'>
