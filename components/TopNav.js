@@ -7,7 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
  * @param {string} title Title to be displayed on the left of the nav bar.
  * @returns 
  */
-export default function TopNav({ title, subcomponents }) {
+export default function TopNav({ title, onBurgerMenuClicked, subcomponents }) {
 
     function generateSubcomponents() {
         let components = []
@@ -18,10 +18,10 @@ export default function TopNav({ title, subcomponents }) {
     return (
         <div className='px-5 bg-neutral-100'>
             <nav className='py-5 flex justify-between' >
-                <ui className='flex items-center space-x-5'>
-                    <AiOutlineMenu className='text-2xl cursor-pointer' />
-                    <p className='text-lg font-bold'>{title}</p>
-                </ui>
+                <ul className='flex items-center space-x-5'>
+                    <li><AiOutlineMenu className='text-2xl cursor-pointer' onClick={onBurgerMenuClicked}/></li>
+                    <li><p className='text-lg font-bold'>{title}</p></li>
+                </ul>
 
                 <ul className='flex items-center space-x-5'>
                     {generateSubcomponents()}
