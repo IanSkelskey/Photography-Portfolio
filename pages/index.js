@@ -25,19 +25,19 @@ export default function Portfolio() {
   }
 
   const navDrawer =
-    <div className='float-left lg:w-56 w-full min-h-full flex-col bg-neutral-200 text-center'>
+    <div className='float-left lg:w-56 w-full bg-neutral-200 text-center'>
       <ul>
-        <li className='py-5 flex justify-between shadow-sm'>
-          <RiGalleryFill className='text-3xl' />
-          <a className='text-left w-36' href='#'>Gallery</a>
+        <li className='py-5 flex shadow-sm items-center'>
+          <RiGalleryFill className='text-3xl w-20' />
+          <a href='#'>Gallery</a>
         </li>
-        <li className='py-5 flex justify-between shadow-sm'>
-          <AiFillFileText className='text-3xl' />
-          <a className='text-left w-36' href='#'>Resume</a>
+        <li className='py-5 flex shadow-sm items-center'>
+          <AiFillFileText className='text-3xl w-20' />
+          <a href='#'>Resume</a>
         </li>
-        <li className='py-5 flex justify-between shadow-sm'>
-          <AiFillCamera className='text-3xl' />
-          <a className='text-left w-36' href='#services'>Services</a>
+        <li className='py-5 flex shadow-sm items-center'>
+          <AiFillCamera className='text-3xl w-20' />
+          <a href='#services'>Services</a>
         </li>
       </ul>
     </div>
