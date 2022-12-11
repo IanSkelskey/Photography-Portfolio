@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineHeart } from 'react-icons/ai';
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineHeart, AiFillFileText, AiFillCamera } from 'react-icons/ai';
+import { RiGalleryFill } from 'react-icons/ri'
 import rainbow from '../public/photos/iceland/rainbow.png'
 import church from '../public/photos/iceland/church.png'
 
@@ -26,8 +27,18 @@ export default function Portfolio() {
   const navDrawer =
     <div className='float-left lg:w-56 w-full min-h-full flex-col bg-neutral-200 text-center'>
       <ul>
-        <li className='py-5'><a href='#'>Gallery</a></li>
-        <li className='py-5'><a href='#services'>Services</a></li>
+        <li className='py-5 flex justify-between shadow-sm'>
+          <RiGalleryFill className='text-3xl' />
+          <a className='text-left w-36' href='#'>Gallery</a>
+        </li>
+        <li className='py-5 flex justify-between shadow-sm'>
+          <AiFillFileText className='text-3xl' />
+          <a className='text-left w-36' href='#'>Resume</a>
+        </li>
+        <li className='py-5 flex justify-between shadow-sm'>
+          <AiFillCamera className='text-3xl' />
+          <a className='text-left w-36' href='#services'>Services</a>
+        </li>
       </ul>
     </div>
 
@@ -46,7 +57,6 @@ export default function Portfolio() {
             onBurgerMenuClicked={expandBurgerMenu}
             subcomponents={
               [
-                <a key={1} className='font-medium' href='#'>Resume</a>,
                 <a key={2} className='font-medium' href='#'>Contact</a>,
                 <AiOutlineHeart key={3} className='text-2xl' />
               ]
@@ -78,7 +88,7 @@ export default function Portfolio() {
             <div id='services'>
               <ServicesCard />
             </div>
-            
+
 
             {/** Social Links */}
             <div className='text-5xl flex justify-center gap-16 text-neutral-600 py-5'>
