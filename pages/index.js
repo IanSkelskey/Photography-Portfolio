@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineHeart,AiFillFileText, AiFillCamera } from 'react-icons/ai';
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineHeart, AiFillFileText, AiFillCamera } from 'react-icons/ai';
 import { RiGalleryFill } from 'react-icons/ri'
 import rainbow from '../public/photos/iceland/rainbow.png'
 import church from '../public/photos/iceland/church.png'
@@ -48,15 +48,18 @@ export default function Portfolio() {
             <NavDrawer
               items={
                 [
-                  <NavDrawerItem 
+                  <NavDrawerItem
+                    key={1}
                     icon={<RiGalleryFill />}
                     link={<a href='#'>Gallery</a>}
                   />,
-                  <NavDrawerItem 
+                  <NavDrawerItem
+                    key={2}
                     icon={<AiFillFileText />}
                     link={<a href='#'>Resume</a>}
                   />,
-                  <NavDrawerItem 
+                  <NavDrawerItem
+                    key={3}
                     icon={<AiFillCamera />}
                     link={<a href='#'>Services</a>}
                   />
