@@ -11,6 +11,8 @@ import { useState } from 'react'
 import TopNav from '../components/TopNav';
 import ContentCard from '../components/ContentCard';
 import ServicesCard from '../components/ServicesCard';
+import NavDrawer from '../components/NavDrawer';
+import NavDrawerItem from '../components/NavDrawerItem';
 
 /**
  * 
@@ -18,29 +20,7 @@ import ServicesCard from '../components/ServicesCard';
  */
 export default function Portfolio() {
 
-  const [menuActive, setMenuActive] = useState(false);
-
-  function expandBurgerMenu() {
-    setMenuActive(!menuActive);
-  }
-
-  const navDrawer =
-    <div className='float-left lg:w-56 w-full bg-neutral-200 text-center'>
-      <ul>
-        <li key={1} className='py-5 flex shadow-sm items-center'>
-          <RiGalleryFill className='text-3xl w-20' />
-          <a href='#'>Gallery</a>
-        </li>
-        <li key={2} className='py-5 flex shadow-sm items-center'>
-          <AiFillFileText className='text-3xl w-20' />
-          <a href='#'>Resume</a>
-        </li>
-        <li key={3} className='py-5 flex shadow-sm items-center'>
-          <AiFillCamera className='text-3xl w-20' />
-          <a href='#services'>Services</a>
-        </li>
-      </ul>
-    </div>
+  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
   return (
     <div className='min-h-screen'>
@@ -51,51 +31,73 @@ export default function Portfolio() {
       </Head>
 
       <main>
-          <TopNav
-            title={'Your Name'}
-            onBurgerMenuClicked={expandBurgerMenu}
-            subcomponents={
-              [
-                <a key={2} className='font-medium' href='#'>Contact</a>,
-                <AiOutlineHeart key={3} className='text-2xl' />
-              ]
-            } />
+        <TopNav
+          title={'Your Name'}
+          onBurgerMenuClicked={() => setDrawerIsOpen(!drawerIsOpen)}
+          subcomponents={
+            [
+              <a key={2} className='font-medium' href='#'>Contact</a>,
+              <AiOutlineHeart key={3} className='text-2xl' />
+            ]
+          } />
 
-          {/** Main Content */}
-          <div>
+        {/** Main Content */}
+        <div>
 
-            {menuActive ? navDrawer : null}
-
-            <h1>Your Name Photography</h1>
-
-            <ContentCard
-              title='“Photography is the art of making memories tangible.”'
-              text='- Destin Sparks'
-              image={<Image src={rainbow} />}
-              dark={false}
+          {drawerIsOpen ?
+            <NavDrawer
+              items={
+                [
+                  <NavDrawerItem
+                    key={1}
+                    icon={<RiGalleryFill />}
+                    link={<a href='#'>Gallery</a>}
+                  />,
+                  <NavDrawerItem
+                    key={2}
+                    icon={<AiFillFileText />}
+                    link={<a href='#'>Resume</a>}
+                  />,
+                  <NavDrawerItem
+                    key={3}
+                    icon={<AiFillCamera />}
+                    link={<a href='#'>Services</a>}
+                  />
+                ]
+              }
             />
-            <ContentCard
-              title='Title Text Card'
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            : null}
+
+          <h1>Your Name Photography</h1>
+
+          <ContentCard
+            title='“Photography is the art of making memories tangible.”'
+            text='- Destin Sparks'
+            image={<Image src={rainbow} />}
+            dark={false}
+          />
+          <ContentCard
+            title='Title Text Card'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Morbi vel nisl at velit ultricies ornare ac ac libero.
               Sed ut diam non est egestas hendrerit sed ullamcorper nisl.
               Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
               Nunc tempor blandit risus. Nunc lacus mi, tempus sit amet nisi non, rutrum imperdiet nunc.'
-              image={<Image src={church} />}
-              dark={true}
-            />
-            <div id='services'>
-              <ServicesCard />
-            </div>
-
-
-            {/** Social Links */}
-            <div className='text-5xl flex justify-center gap-16 text-neutral-600 py-5'>
-              <AiFillInstagram />
-              <AiFillLinkedin />
-              <AiFillYoutube />
-            </div>
+            image={<Image src={church} />}
+            dark={true}
+          />
+          <div id='services'>
+            <ServicesCard />
           </div>
+
+
+          {/** Social Links */}
+          <div className='text-5xl flex justify-center gap-16 text-neutral-600 py-5'>
+            <AiFillInstagram />
+            <AiFillLinkedin />
+            <AiFillYoutube />
+          </div>
+        </div>
 
       </main>
 
