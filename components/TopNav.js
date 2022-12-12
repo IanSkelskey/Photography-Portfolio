@@ -9,14 +9,6 @@ import { AiOutlineMenu } from 'react-icons/ai'
  */
 export default function TopNav({ title, onBurgerMenuClicked, subcomponents }) {
 
-    function generateSubcomponents() {
-        let components = []
-        for (var i = 0; i < subcomponents.length; i++) { 
-            components[i] = <li key={i}>{subcomponents[i]}</li> 
-        }
-        return components;
-    }
-
     return (
         <div className='px-5 bg-neutral-100'>
             <nav className='py-5 flex justify-between' >
@@ -26,7 +18,7 @@ export default function TopNav({ title, onBurgerMenuClicked, subcomponents }) {
                 </ul>
 
                 <ul className='flex items-center space-x-5'>
-                    {generateSubcomponents()}
+                    {subcomponents}
                 </ul>
             </nav >
         </div>
