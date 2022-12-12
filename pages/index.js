@@ -51,7 +51,6 @@ export default function Portfolio() {
       </Head>
 
       <main>
-        <section>
           <TopNav
             title={'Your Name'}
             onBurgerMenuClicked={expandBurgerMenu}
@@ -98,7 +97,6 @@ export default function Portfolio() {
             </div>
           </div>
 
-        </section>
       </main>
 
     </div>
