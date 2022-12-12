@@ -11,7 +11,9 @@ export default function TopNav({ title, onBurgerMenuClicked, subcomponents }) {
 
     function generateSubcomponents() {
         let components = []
-        for (var i = 0; i < subcomponents.length; i++) { components[i] = <li>{subcomponents[i]}</li> }
+        for (var i = 0; i < subcomponents.length; i++) { 
+            components[i] = <li key={i}>{subcomponents[i]}</li> 
+        }
         return components;
     }
 
