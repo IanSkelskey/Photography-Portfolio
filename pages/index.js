@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineHeart } from 'react-icons/ai';
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineHeart, AiFillFileText, AiFillCamera } from 'react-icons/ai';
+import { RiGalleryFill } from 'react-icons/ri'
 import rainbow from '../public/photos/iceland/rainbow.png'
 import church from '../public/photos/iceland/church.png'
+
+import { useState } from 'react'
 
 //  Custom Tailwind Components
 import TopNav from '../components/TopNav';
@@ -14,6 +17,31 @@ import ServicesCard from '../components/ServicesCard';
  * @returns A portfolio web application.
  */
 export default function Portfolio() {
+
+  const [menuActive, setMenuActive] = useState(false);
+
+  function expandBurgerMenu() {
+    setMenuActive(!menuActive);
+  }
+
+  const navDrawer =
+    <div className='float-left lg:w-56 w-full bg-neutral-200 text-center'>
+      <ul>
+        <li className='py-5 flex shadow-sm items-center'>
+          <RiGalleryFill className='text-3xl w-20' />
+          <a href='#'>Gallery</a>
+        </li>
+        <li className='py-5 flex shadow-sm items-center'>
+          <AiFillFileText className='text-3xl w-20' />
+          <a href='#'>Resume</a>
+        </li>
+        <li className='py-5 flex shadow-sm items-center'>
+          <AiFillCamera className='text-3xl w-20' />
+          <a href='#services'>Services</a>
+        </li>
+      </ul>
+    </div>
+
   return (
     <div className='min-h-screen'>
       <Head>
@@ -23,12 +51,11 @@ export default function Portfolio() {
       </Head>
 
       <main>
-        <section>
           <TopNav
             title={'Your Name'}
+            onBurgerMenuClicked={expandBurgerMenu}
             subcomponents={
               [
-                <a key={1} className='font-medium' href='#'>Resume</a>,
                 <a key={2} className='font-medium' href='#'>Contact</a>,
                 <AiOutlineHeart key={3} className='text-2xl' />
               ]
@@ -36,6 +63,8 @@ export default function Portfolio() {
 
           {/** Main Content */}
           <div>
+
+            {menuActive ? navDrawer : null}
 
             <h1>Your Name Photography</h1>
 
@@ -55,8 +84,10 @@ export default function Portfolio() {
               image={<Image src={church} />}
               dark={true}
             />
+            <div id='services'>
+              <ServicesCard />
+            </div>
 
-            <ServicesCard />
 
             {/** Social Links */}
             <div className='text-5xl flex justify-center gap-16 text-neutral-600 py-5'>
@@ -66,7 +97,6 @@ export default function Portfolio() {
             </div>
           </div>
 
-        </section>
       </main>
 
     </div>
