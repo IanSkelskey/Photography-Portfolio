@@ -29,10 +29,10 @@ export default function Home() {
                 image={<Image src={church} />}
                 dark={true}
             />
+
             <div id='services'>
                 <ServicesCard />
             </div>
-
 
             {/** Social Links */}
             <div className='text-5xl flex justify-center gap-16 text-neutral-600 py-5'>

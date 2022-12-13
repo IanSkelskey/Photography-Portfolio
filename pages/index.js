@@ -11,6 +11,7 @@ import TopNav from '../components/TopNav';
 import Home from '../pages/Home';
 import NavDrawer from '../components/NavDrawer';
 import NavDrawerItem from '../components/NavDrawerItem';
+import About from './About';
 
 /**
  * 
