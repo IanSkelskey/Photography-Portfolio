@@ -11,7 +11,7 @@ export default function TopNav({ title, onBurgerMenuClicked, subcomponents }) {
 
     return (
         <div className='px-5 bg-neutral-100'>
-            <nav className='py-5 flex justify-between' >
+            <nav className='py-4 flex justify-between' >
                 <ul className='flex items-center space-x-5'>
                     <li><AiOutlineMenu className='text-2xl cursor-pointer' onClick={onBurgerMenuClicked}/></li>
                     <li><p className='text-lg font-bold'>{title}</p></li>
