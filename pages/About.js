@@ -1,13 +1,9 @@
-import ContentCard from "../components/ContentCard";
-
-import church from '../public/photos/iceland/church.png'
-
-import Image from 'next/image';
+import ContentPage from "../components/ContentPage";
 
 export default function About() {
     return (
-        <ContentCard
-            title="Your Name"
-            image={ <Image src={church} /> } />
+        <ContentPage pageComponent={
+            <h1>About the Photographer</h1>
+        } />
     );
 }
