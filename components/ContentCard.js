@@ -1,3 +1,12 @@
+/**
+ * 
+ * @param {string} title Title of the content.
+ * @param {string} text The body text for the content card.
+ * @param {'next/image'} image The image to be displayed in the content card.
+ * @param {boolean} dark Whether the content card should be displayed with black background and white text.
+ * 
+ * @returns A content card populated based on the parameters.
+ */
 export default function ContentCard({ title, text, image, dark }) {
     return (
         {/** Decorator Container */ },
