@@ -43,22 +43,26 @@ export default function ContentPage({ pageComponent, title }) {
                                     <NavDrawerItem
                                         key={0}
                                         icon={<AiFillHome />}
-                                        link={<a href='/'>Home</a>}
+                                        target='/'
+                                        text='Home'
                                     />,
                                     <NavDrawerItem
                                         key={1}
                                         icon={<RiGalleryFill />}
-                                        link={<a href='/Gallery'>Gallery</a>}
+                                        target='/Gallery'
+                                        text='Gallery'
                                     />,
                                     <NavDrawerItem
                                         key={2}
                                         icon={<AiFillFileText />}
-                                        link={<a href='#'>Resume</a>}
+                                        target='#'
+                                        text='Resume'
                                     />,
                                     <NavDrawerItem
                                         key={3}
                                         icon={<AiFillCamera />}
-                                        link={<a href='/#services'>Services</a>}
+                                        target='/#services'
+                                        text='Services'
                                     />
                                 ]
                             }
